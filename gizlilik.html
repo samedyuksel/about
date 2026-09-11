@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası — Raspi Yedek</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; padding: 3rem 1.25rem;
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 42rem; margin-inline: auto;
+    background: #fdfdfc; color: #1c1b19;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #161513; color: #e9e7e3; }
+    a { color: #8ab4f8; }
+  }
+  h1 { font-size: 1.5rem; margin-bottom: .25rem; letter-spacing: -.01em; }
+  .alt { color: #6b6862; margin-top: 0; font-size: .95rem; }
+  @media (prefers-color-scheme: dark) { .alt { color: #9b968d; } }
+  h2 { font-size: 1.05rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  code { background: #f0eeea; padding: .1em .35em; border-radius: 3px; font-size: .9em; }
+  @media (prefers-color-scheme: dark) { code { background: #2a2825; } }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e4e1dc; font-size: .9rem; color: #6b6862; }
+  @media (prefers-color-scheme: dark) { footer { border-color: #2e2c28; color: #9b968d; } }
+</style>
+</head>
+<body>
+
+<h1>Gizlilik Politikası</h1>
+<p class="alt">Raspi Yedek · Son güncelleme: 11 Eylül 2026</p>
+
+<h2>Özet</h2>
+<p>
+  Raspi Yedek tek kişilik, kişisel bir yedekleme aracıdır. Geliştiricisi tarafından
+  yalnızca kendi verisini kendi Google Drive hesabına yedeklemek için kullanılır.
+  Başka kullanıcıya sunulan bir hizmet değildir, veri toplamaz ve hiçbir veriyi
+  üçüncü taraflarla paylaşmaz.
+</p>
+
+<h2>Hangi verilere erişilir</h2>
+<p>
+  Uygulama Google hesabından yalnızca <code>https://www.googleapis.com/auth/drive.file</code>
+  yetkisini ister. Bu yetki, uygulamanın Google Drive'da <strong>yalnızca kendi oluşturduğu
+  dosyalara</strong> erişmesine izin verir. Uygulamanın erişemediği şeyler:
+</p>
+<ul>
+  <li>Drive'daki diğer dosya ve klasörler</li>
+  <li>Google Fotoğraflar, Gmail, Takvim, Kişiler ve diğer Google hizmetleri</li>
+  <li>Ad, profil fotoğrafı gibi hesap bilgileri</li>
+</ul>
+
+<h2>Hangi veriler yüklenir</h2>
+<p>
+  Yüklenen tek şey, geliştiricinin kendi sunucusundaki kişisel fotoğraf arşivinin
+  yedeğidir. Veriler sunucudan çıkmadan önce <a href="https://restic.net/">restic</a>
+  ile uçtan uca şifrelenir; Drive'a yalnızca şifrelenmiş paketler yazılır. Şifre çözme
+  anahtarı yalnızca geliştiricinin sunucusunda tutulur ve hiçbir yere gönderilmez.
+  Bu nedenle Google dahil hiç kimse yedeklerin içeriğini okuyamaz.
+</p>
+
+<h2>Veri paylaşımı ve analitik</h2>
+<p>
+  Hiçbir veri satılmaz, kiralanmaz, reklam amacıyla kullanılmaz veya üçüncü taraflarla
+  paylaşılmaz. Uygulama analitik, izleme veya çerez kullanmaz. Bu web sayfası da
+  ziyaretçi verisi toplamaz.
+</p>
+
+<h2>Saklama ve silme</h2>
+<p>
+  Yedekler Google Drive'da, geliştiricinin kendi hesabında saklanır ve eski sürümler
+  düzenli olarak budanır. Google hesabındaki klasör silindiğinde veri de silinir.
+</p>
+
+<h2>Erişimi kaldırma</h2>
+<p>
+  Uygulamaya verilen izin istenildiği zaman
+  <a href="https://myaccount.google.com/permissions">Google Hesabı → Üçüncü taraf uygulamalar</a>
+  sayfasından kaldırılabilir. İzin kaldırıldığında uygulama Drive'a erişemez.
+</p>
+
+<h2>Değişiklikler</h2>
+<p>
+  Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih değiştirilir.
+</p>
+
+<h2>İletişim</h2>
+<p>
+  Sorular için: <a href="https://github.com/samedyuksel">github.com/samedyuksel</a>
+</p>
+
+<footer>
+  <a href="./">← Raspi Yedek</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raspi Yedek</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; padding: 3rem 1.25rem;
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 42rem; margin-inline: auto;
+    background: #fdfdfc; color: #1c1b19;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #161513; color: #e9e7e3; }
+    a { color: #8ab4f8; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; letter-spacing: -.01em; }
+  .alt { color: #6b6862; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .alt { color: #9b968d; } }
+  h2 { font-size: 1.05rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e4e1dc; font-size: .9rem; color: #6b6862; }
+  @media (prefers-color-scheme: dark) { footer { border-color: #2e2c28; color: #9b968d; } }
+</style>
+</head>
+<body>
+
+<h1>Raspi Yedek</h1>
+<p class="alt">Kişisel bir yedekleme aracı.</p>
+
+<p>
+  Bu uygulama, evimdeki Raspberry Pi sunucusunda duran kişisel fotoğraf arşivimi
+  Google Drive'a <strong>şifrelenmiş</strong> olarak yedekler. Herkese açık bir hizmet
+  değildir; yalnızca kendi verimi kendi Google hesabıma yedeklemek için yazılmıştır.
+</p>
+
+<h2>Nasıl çalışır</h2>
+<ul>
+  <li>Yedek, sunucuda <a href="https://restic.net/">restic</a> ile <strong>cihazdan çıkmadan önce</strong> şifrelenir.</li>
+  <li>Şifrelenmiş paketler <a href="https://rclone.org/">rclone</a> ile Google Drive'daki kendi klasörüne yüklenir.</li>
+  <li>Şifre çözme anahtarı yalnızca sunucumda bulunur. Google dahil hiç kimse içeriği okuyamaz.</li>
+</ul>
+
+<h2>Google hesabına erişim</h2>
+<p>
+  Uygulama yalnızca <code>drive.file</code> yetkisini kullanır: Google Drive'da
+  <strong>yalnızca kendi oluşturduğu dosyaları</strong> görebilir ve değiştirebilir.
+  Hesaptaki diğer dosyalara, fotoğraflara, e-postalara veya kişilere erişimi yoktur.
+</p>
+
+<footer>
+  <a href="./gizlilik.html">Gizlilik Politikası</a>
+</footer>
+
+</body>
+</html>
